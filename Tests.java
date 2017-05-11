@@ -4,11 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class Tests {
+import junit.framework.Assert;
 
+public class Tests {
+	private ArrayAsociativo array;
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testsizevacio0() {
+		array=new ArrayAsociativo();
+		int i=array.size();
+		assertEquals(new Integer(0), new Integer(i));
 	}
 
 }

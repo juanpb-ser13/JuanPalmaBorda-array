@@ -33,6 +33,11 @@ public class ArrayAsociativo {
 			}
 		}
 	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	//Métodos de instancia
 }
