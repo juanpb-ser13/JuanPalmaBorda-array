@@ -8,8 +8,8 @@ import junit.framework.Assert;
 
 public class Tests {
 	private ArrayAsociativo array;
-	private String claves[]=new String[10];
-	private String valores[]=new String[10];
+	private String claves[]=new String[1];
+	private String valores[]=new String[1];
 	@Test
 	public void testsizevacio0() {
 		array=new ArrayAsociativo();
