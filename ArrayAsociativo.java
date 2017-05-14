@@ -73,7 +73,14 @@ public class ArrayAsociativo {
 				primero= new Nodo(string, string2,primero);
 				size++;
 			}else{
-			
+				Nodo busqueda2=primero.sig;
+				while(busqueda2!=null){
+					busqueda=busqueda.sig;
+					busqueda2=busqueda2.sig;
+				}
+				busqueda2 = new Nodo(string, string2,null);
+				busqueda.sig=busqueda2;
+				size++;
 			}
 			}
 }

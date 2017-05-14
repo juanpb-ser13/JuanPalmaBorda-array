@@ -67,4 +67,13 @@ public class Tests {
 		String resultado=array.get("Hola");
 		assertEquals("Adios",resultado);
 	}
+	@Test 
+	public void insertarnovacio(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Adios1";
+		array=new ArrayAsociativo(claves,valores);
+		array.put("Hola", "Adios");
+		String resultado=array.get("Hola");
+		assertEquals("Adios",resultado);
+	}
 }
