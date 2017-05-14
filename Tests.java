@@ -145,7 +145,7 @@ public class Tests {
 		assertEquals(false,resultado);
 	}
 	@Test 
-	public void borrarvacioboolean(){
+	public void borrarnovacioboolean(){
 		claves=new String[1];valores=new String[1];
 		claves[0]="Hola1";valores[0]="Hasta Luego";
 		array=new ArrayAsociativo(claves,valores);
@@ -153,11 +153,19 @@ public class Tests {
 		assertEquals(true,resultado);
 	}
 	@Test (expected = NoSuchElementException.class) 
-	public void borrarvacioerror(){
+	public void borranorvacioerror(){
 		claves=new String[1];valores=new String[1];
 		claves[0]="Hola1";valores[0]="Hasta Luego";
 		array=new ArrayAsociativo(claves,valores);
 		array.remove("Hola1");
 		array.get("Hola1");
+	}
+	@Test 
+	public void borranoexisteclaver(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Hasta Luego";
+		array=new ArrayAsociativo(claves,valores);
+		boolean resultado=array.remove("Hola");
+		assertEquals(false,resultado);
 	}
 }
