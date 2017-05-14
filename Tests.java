@@ -130,4 +130,12 @@ public class Tests {
 		boolean resultado=array.search("Hola1");
 		assertEquals(true,resultado);
 	}
+	@Test 
+	public void searchnoestar(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Hasta Luego";
+		array=new ArrayAsociativo(claves,valores);
+		boolean resultado=array.search("Hola");
+		assertEquals(false,resultado);
+	}
 }

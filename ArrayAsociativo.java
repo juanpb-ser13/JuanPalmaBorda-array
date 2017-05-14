@@ -96,7 +96,7 @@ public class ArrayAsociativo {
 			String devolucion;
 			try{
 				devolucion=get(string);
-			}catch(Exception e){
+			}catch( NoSuchElementException e){
 				devolucion=string2;
 			}
 			return devolucion;
@@ -107,7 +107,7 @@ public class ArrayAsociativo {
 			try{
 				get(string);
 				resultado=true;
-			}catch(Exception e){
+			}catch( NoSuchElementException e){
 				resultado=false;
 			}
 			return resultado;
