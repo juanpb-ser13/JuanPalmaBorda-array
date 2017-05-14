@@ -30,8 +30,7 @@ public class Tests {
 	}
 	@Test
 	public void testsizenovacio() {
-		claves=new String[2];
-		valores=new String[2];
+		claves=new String[2];valores=new String[2];
 		claves[0]="Hola";valores[0]="Adios";
 		claves[1]="Hola1";valores[1]="Adios2";
 		array=new ArrayAsociativo(claves,valores);
@@ -43,5 +42,14 @@ public class Tests {
 	public void testgetvacio(){
 		array=new ArrayAsociativo();
 		String resultado=array.get("hola");
+	}
+	@Test
+	public void testgetnovacio(){
+		claves=new String[2];valores=new String[2];
+		claves[0]="Hola";valores[0]="Adios";
+		claves[1]="Hola1";valores[1]="Adios2";
+		array=new ArrayAsociativo(claves,valores);
+		String resultado=array.get("Hola");
+		assertEquals("Adios",resultado);
 	}
 }

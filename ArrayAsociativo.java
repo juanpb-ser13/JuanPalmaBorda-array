@@ -50,7 +50,18 @@ public class ArrayAsociativo {
 			if(size==0){
 				throw new NoSuchElementException("Lista vacía");
 			}
-			return null;
+			boolean encontrado=false;
+			Nodo busqueda=primero;
+			String palabra = null;
+			while(!encontrado){
+				if(busqueda.clave==string){
+					palabra=busqueda.valor;
+					encontrado=true;
+				}else{
+					busqueda=busqueda.sig;
+				}
+			}
+			return palabra;
 		}
 		
 }
