@@ -1,5 +1,8 @@
 package prArrayasociativo;
-
+/*
+ *  Alumno: Juan Palma Borda
+ *  Curso: 2º Software
+ */
 import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;

@@ -1,5 +1,8 @@
 package prArrayasociativo;
-
+/*
+ *  Alumno: Juan Palma Borda
+ *  Curso: 2º Software
+ */
 import java.util.NoSuchElementException;
 
 public class ArrayAsociativo {
