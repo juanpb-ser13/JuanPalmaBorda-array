@@ -103,7 +103,13 @@ public class ArrayAsociativo {
 		}
 
 		public boolean search(String string) {
-			// TODO Auto-generated method stub
-			return false;
+			boolean resultado=false;
+			try{
+				get(string);
+				resultado=true;
+			}catch(Exception e){
+				resultado=false;
+			}
+			return resultado;
 		}
 }
