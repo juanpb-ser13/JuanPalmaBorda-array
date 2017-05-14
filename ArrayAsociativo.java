@@ -102,7 +102,7 @@ public class ArrayAsociativo {
 			return devolucion;
 		}
 
-		public boolean search(String string) {
+		public boolean containskey(String string) {
 			boolean resultado=false;
 			try{
 				get(string);
@@ -111,5 +111,10 @@ public class ArrayAsociativo {
 				resultado=false;
 			}
 			return resultado;
+		}
+
+		public boolean remove(String string) {
+			// TODO Auto-generated method stub
+			return false;
 		}
 }

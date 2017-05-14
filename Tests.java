@@ -119,7 +119,7 @@ public class Tests {
 	@Test 
 	public void searchvacio(){
 		array=new ArrayAsociativo();
-		boolean resultado=array.search("Hola1");
+		boolean resultado=array.containskey("Hola1");
 		assertEquals(false,resultado);
 	}
 	@Test 
@@ -127,7 +127,7 @@ public class Tests {
 		claves=new String[1];valores=new String[1];
 		claves[0]="Hola1";valores[0]="Hasta Luego";
 		array=new ArrayAsociativo(claves,valores);
-		boolean resultado=array.search("Hola1");
+		boolean resultado=array.containskey("Hola1");
 		assertEquals(true,resultado);
 	}
 	@Test 
@@ -135,7 +135,29 @@ public class Tests {
 		claves=new String[1];valores=new String[1];
 		claves[0]="Hola1";valores[0]="Hasta Luego";
 		array=new ArrayAsociativo(claves,valores);
-		boolean resultado=array.search("Hola");
+		boolean resultado=array.containskey("Hola");
 		assertEquals(false,resultado);
+	}
+	@Test 
+	public void borrarvacio(){
+		array=new ArrayAsociativo();
+		boolean resultado=array.remove("Hola1");
+		assertEquals(false,resultado);
+	}
+	@Test 
+	public void borrarvacioboolean(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Hasta Luego";
+		array=new ArrayAsociativo(claves,valores);
+		boolean resultado=array.remove("Hola1");
+		assertEquals(true,resultado);
+	}
+	@Test (expected = NoSuchElementException.class) 
+	public void borrarvacioerror(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Hasta Luego";
+		array=new ArrayAsociativo(claves,valores);
+		array.remove("Hola1");
+		array.get("Hola1");
 	}
 }
