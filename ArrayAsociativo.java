@@ -16,30 +16,29 @@ public class ArrayAsociativo {
 	
 	//Variables de instancia
 	private Nodo primero;
-	
+	private int size;
 	
 	//Constructores
 	public ArrayAsociativo(){
 		primero = null;
+		size=0;
 	}
 	
 	public ArrayAsociativo(String[] claves, String[] valores){
 		this();
 		if (claves.length > 0){
 			primero = new Nodo(claves[0], valores[0],null);
+			size++;
 			for (int i = 1; i< claves.length; i++){
 				Nodo nuevo = new Nodo(claves[i], valores[i],primero);
 				primero = nuevo;
+				size++;
 			}
 		}
 	}
 
 	public int size() {
-		if(primero==null){
-			return 0;
-		}else{
-		return 1;
-		}
+	return size;
 	}
 	
 	//Métodos de instancia
