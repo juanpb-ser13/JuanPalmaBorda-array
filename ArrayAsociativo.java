@@ -101,4 +101,9 @@ public class ArrayAsociativo {
 			}
 			return devolucion;
 		}
+
+		public boolean search(String string) {
+			// TODO Auto-generated method stub
+			return false;
+		}
 }

@@ -116,4 +116,10 @@ public class Tests {
 		String resultado=array.getOrElse("Hola","No esta");
 		assertEquals("No esta",resultado);
 	}
+	@Test 
+	public void search(){
+		array=new ArrayAsociativo();
+		boolean resultado=array.search("Hola1");
+		assertEquals(false,resultado);
+	}
 }
