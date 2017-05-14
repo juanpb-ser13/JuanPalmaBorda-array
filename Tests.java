@@ -2,6 +2,8 @@ package prArrayasociativo;
 
 import static org.junit.Assert.*;
 
+import java.util.NoSuchElementException;
+
 import org.junit.Test;
 
 import junit.framework.Assert;
@@ -30,12 +32,16 @@ public class Tests {
 	public void testsizenovacio() {
 		claves=new String[2];
 		valores=new String[2];
-		claves[0]="Hola";
-		valores[0]="Adios";
-		claves[1]="Hola1";
-		valores[1]="Adios2";
+		claves[0]="Hola";valores[0]="Adios";
+		claves[1]="Hola1";valores[1]="Adios2";
 		array=new ArrayAsociativo(claves,valores);
 		int i=array.size();
 		assertEquals(new Integer(2), new Integer(i));
+	}
+	
+	@Test (expected = NoSuchElementException.class)
+	public void testgetvacio(){
+		array=new ArrayAsociativo();
+		String resultado=array.get("hola");
 	}
 }

@@ -37,9 +37,16 @@ public class ArrayAsociativo {
 		}
 	}
 
-	public int size() {
-	return size;
-	}
 	
 	//Métodos de instancia
+	
+	public int size() {
+		return size;
+		}
+
+		public String get(String string) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
 }
