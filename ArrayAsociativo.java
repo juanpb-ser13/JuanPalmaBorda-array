@@ -1,5 +1,7 @@
 package prArrayasociativo;
 
+import java.util.NoSuchElementException;
+
 public class ArrayAsociativo {
 	//Clases internas
 	private class Nodo{
@@ -45,7 +47,9 @@ public class ArrayAsociativo {
 		}
 
 		public String get(String string) {
-			// TODO Auto-generated method stub
+			if(size==0){
+				throw new NoSuchElementException("Lista vacía");
+			}
 			return null;
 		}
 		
