@@ -117,9 +117,17 @@ public class Tests {
 		assertEquals("No esta",resultado);
 	}
 	@Test 
-	public void search(){
+	public void searchvacio(){
 		array=new ArrayAsociativo();
 		boolean resultado=array.search("Hola1");
 		assertEquals(false,resultado);
+	}
+	@Test 
+	public void searchnovacio(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Hasta Luego";
+		array=new ArrayAsociativo(claves,valores);
+		boolean resultado=array.search("Hola1");
+		assertEquals(true,resultado);
 	}
 }
