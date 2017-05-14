@@ -52,4 +52,12 @@ public class Tests {
 		String resultado=array.get("Hola");
 		assertEquals("Adios",resultado);
 	}
+	@Test (expected = NoSuchElementException.class)
+	public void testgetnovacioerror(){
+		claves=new String[2];valores=new String[2];
+		claves[0]="Hola";valores[0]="Adios";
+		claves[1]="Hola1";valores[1]="Adios2";
+		array=new ArrayAsociativo(claves,valores);
+		String resultado=array.get("kola");
+	}
 }
