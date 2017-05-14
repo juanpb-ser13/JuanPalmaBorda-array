@@ -59,12 +59,17 @@ public class ArrayAsociativo {
 					encontrado=true;
 				}else{
 					if(busqueda.sig==null){
-						throw new NoSuchElementException("Lista vacía");
+						throw new NoSuchElementException("Elemento no encontrado");
 					}
 					busqueda=busqueda.sig;
 				}
 			}
 			return palabra;
+		}
+
+		public void put(String string, String string2) {
+		
+			
 		}
 		
 }

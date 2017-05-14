@@ -60,4 +60,11 @@ public class Tests {
 		array=new ArrayAsociativo(claves,valores);
 		String resultado=array.get("kola");
 	}
+	@Test 
+	public void insertarvacio(){
+		array=new ArrayAsociativo();
+		array.put("Hola", "Adios");
+		String resultado=array.get("Hola");
+		assertEquals("Adios",resultado);
+	}
 }
