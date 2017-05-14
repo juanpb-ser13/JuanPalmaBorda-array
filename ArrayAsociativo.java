@@ -68,8 +68,12 @@ public class ArrayAsociativo {
 		}
 
 		public void put(String string, String string2) {
-		
+			Nodo busqueda=primero;
+			if(busqueda==null){
+				primero= new Nodo(string, string2,primero);
+				size++;
+			}else{
 			
-		}
-		
+			}
+			}
 }
