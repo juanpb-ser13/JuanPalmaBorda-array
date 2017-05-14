@@ -93,7 +93,12 @@ public class ArrayAsociativo {
 			}
 
 		public String getOrElse(String string, String string2) {
-			
-			return string2;
+			String devolucion;
+			try{
+				devolucion=get(string);
+			}catch(Exception e){
+				devolucion=string2;;
+			}
+			return devolucion;
 		}
 }

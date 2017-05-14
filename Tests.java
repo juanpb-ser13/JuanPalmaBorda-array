@@ -100,4 +100,12 @@ public class Tests {
 		String resultado=array.getOrElse("Hola1","No esta");
 		assertEquals("No esta",resultado);
 	}
+	@Test 
+	public void getorelsenovacio(){
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Hasta Luego";
+		array=new ArrayAsociativo(claves,valores);
+		String resultado=array.getOrElse("Hola1","No esta");
+		assertEquals("Hasta Luego",resultado);
+	}
 }
