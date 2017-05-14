@@ -97,7 +97,7 @@ public class ArrayAsociativo {
 			try{
 				devolucion=get(string);
 			}catch(Exception e){
-				devolucion=string2;;
+				devolucion=string2;
 			}
 			return devolucion;
 		}
