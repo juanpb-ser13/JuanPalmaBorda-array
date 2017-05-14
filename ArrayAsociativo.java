@@ -114,7 +114,25 @@ public class ArrayAsociativo {
 		}
 
 		public boolean remove(String string) {
-			// TODO Auto-generated method stub
-			return false;
+			Nodo busqueda=primero;
+			boolean hecho=false;
+			if(busqueda!=null&&busqueda.clave==string){
+				primero=busqueda.sig;
+				hecho=true;
+				size--;
+			}else if(busqueda!=null){
+				Nodo busqueda2=busqueda.sig;
+				while(busqueda2!=null){
+					if(busqueda2.clave==string){
+						hecho=true;
+						busqueda.sig=busqueda2.sig;
+						size--;
+						break;
+					}
+					busqueda=busqueda.sig;
+					busqueda2=busqueda2.sig;
+				}
+			}
+			return hecho;
 		}
 }
