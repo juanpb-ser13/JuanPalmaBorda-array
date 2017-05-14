@@ -58,6 +58,9 @@ public class ArrayAsociativo {
 					palabra=busqueda.valor;
 					encontrado=true;
 				}else{
+					if(busqueda.sig==null){
+						throw new NoSuchElementException("Lista vacía");
+					}
 					busqueda=busqueda.sig;
 				}
 			}
