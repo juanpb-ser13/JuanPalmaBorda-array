@@ -93,7 +93,7 @@ public class ArrayAsociativo {
 			}
 
 		public String getOrElse(String string, String string2) {
-			// TODO Auto-generated method stub
-			return null;
+			
+			return string2;
 		}
 }
