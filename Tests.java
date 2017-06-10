@@ -7,69 +7,63 @@ import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import junit.framework.Assert;
 
 public class Tests {
 	private ArrayAsociativo array;
 	private String claves[];
 	private String valores[];
-	@Ignore
+	@Before
+	public void inicializar(){
+		array=new ArrayAsociativo();
+		claves=new String[2];valores=new String[2];
+		claves[0]="Hola";valores[0]="Adios";
+		claves[1]="Hola1";valores[1]="Adios2";
+	}
+	@After
+	public void destruir(){
+		array=null;
+		claves=null;
+		valores=null;
+	}
 	@Test
 	public void testsizevacio0() {
-		array=new ArrayAsociativo();
 		int i=array.size();
 		assertEquals(new Integer(0), new Integer(i));
 	}
-	@Ignore
 	@Test
 	public void testsizenovacio0() {
-		claves=new String[1];
-		valores=new String[1];
-		claves[0]="Hola";
-		valores[0]="Adios";
+		claves=new String[1];valores=new String[1];
+		claves[0]="Hola1";valores[0]="Adios1";
 		array=new ArrayAsociativo(claves,valores);
 		int i=array.size();
 		assertEquals(new Integer(1), new Integer(i));
 	}
-	@Ignore
 	@Test
 	public void testsizenovacio() {
-		claves=new String[2];valores=new String[2];
-		claves[0]="Hola";valores[0]="Adios";
-		claves[1]="Hola1";valores[1]="Adios2";
 		array=new ArrayAsociativo(claves,valores);
 		int i=array.size();
 		assertEquals(new Integer(2), new Integer(i));
 	}
-	@Ignore
 	@Test (expected = NoSuchElementException.class)
 	public void testgetvacio(){
-		array=new ArrayAsociativo();
-		String resultado=array.get("hola");
+		array.get("hola");
 	}
-	@Ignore
 	@Test
 	public void testgetnovacio(){
-		claves=new String[2];valores=new String[2];
-		claves[0]="Hola";valores[0]="Adios";
-		claves[1]="Hola1";valores[1]="Adios2";
 		array=new ArrayAsociativo(claves,valores);
 		String resultado=array.get("Hola");
 		assertEquals("Adios",resultado);
 	}
-	@Ignore
 	@Test (expected = NoSuchElementException.class) 
 	public void testgetnovacioerror(){
-		claves=new String[2];valores=new String[2];
-		claves[0]="Hola";valores[0]="Adios";
-		claves[1]="Hola1";valores[1]="Adios2";
 		array=new ArrayAsociativo(claves,valores);
-		String resultado=array.get("kola");
+		array.get("kola");
 	}
-	@Ignore
 	@Test 
 	public void insertarvacio(){
 		array=new ArrayAsociativo();
@@ -77,7 +71,6 @@ public class Tests {
 		String resultado=array.get("Hola");
 		assertEquals("Adios",resultado);
 	}
-	@Ignore
 	@Test 
 	public void insertarnovacio(){
 		claves=new String[1];valores=new String[1];
@@ -87,7 +80,6 @@ public class Tests {
 		String resultado=array.get("Hola");
 		assertEquals("Adios",resultado);
 	}
-	@Ignore
 	@Test 
 	public void insertarrepetido(){
 		claves=new String[1];valores=new String[1];

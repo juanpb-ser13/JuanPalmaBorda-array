@@ -28,7 +28,29 @@ public class ArrayAsociativo {
 		primero = null;
 		size=0;
 	}
-	
+	public ArrayAsociativo(String claves, String valores){
+		primero = new Nodo(claves, valores,null);;
+		size=1;
+	}
+	 public ArrayAsociativo(ArrayAsociativo array) {
+	        Nodo src = array.primero;
+	        Nodo dst = null;
+	        
+	        while (src != null) {
+	            
+	            if (dst == null) {
+	              primero = new Nodo(src.clave,src.valor,null);
+	                dst = primero;
+	            }
+	            else
+	                dst.sig = new Nodo(src.clave, src.valor, null);
+	            
+	            src = src.sig;
+	        }
+	        
+	        size = array.size;
+	    }
+
 	public ArrayAsociativo(String[] claves, String[] valores){
 		this();
 		if (claves.length > 0){
