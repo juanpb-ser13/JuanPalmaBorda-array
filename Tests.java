@@ -24,12 +24,14 @@ public class Tests {
 		claves[0]="Hola";valores[0]="Adios";
 		claves[1]="Hola1";valores[1]="Adios2";
 	}
+	
 	@After
 	public void destruir(){
 		array=null;
 		claves=null;
 		valores=null;
 	}
+	
 	@Test
 	public void testsizevacio0() {
 		int i=array.size();
